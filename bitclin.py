@@ -112,10 +112,10 @@ def get_address_info(bitcoin_address):
     return None
 
 parser = argparse.ArgumentParser(description="A cli interface to show current bitcoin network statistics.")
-parser.add_argument('-uf', '--utxfeed', help='Print live Unconfirmed Transaction Feed (Mempool) to console.', action='store_true')
-parser.add_argument('-bf', '--blockfeed', help='Print live block feed to console.', action='store_true')
+parser.add_argument('-u','-utx', '--utxfeed', help='Print live Unconfirmed Transaction Feed (Mempool) to console.', action='store_true')
+parser.add_argument('-b', '--blockfeed', help='Print live block feed to console.', action='store_true')
 parser.add_argument('-w', '--watch', help='Watch a bitcoin address for sent or received transactions.', action='store_true')
-parser.add_argument('-b', '--balance', help='Returns the balance of the address specified.', action='store_true')
+parser.add_argument('-bal', '--balance', help='Returns the balance of the address specified.', action='store_true')
 parser.add_argument('-a', '--address', type=str, help="The bitcoin address.", default=None)
 parser.add_argument('-ha', '--hashrate', help='Returns the network\'s current total hashrate', action='store_true')
 parser.add_argument('-t', '--tx_count', help='Returns the amount of bitcoin transactions sent in the past 24 hours.', action='store_true')
